@@ -4,8 +4,13 @@
   The business is breaking out into a new market and need to convert prices to USD
   Write a function that converts a price to USD (exchange rate is 1.4 $ to £)
 */
+let p_dolar = 1.4;
+let p_brasileño = 5.7 * 0.99
 
-function convertToUSD() {}
+function convertToUSD(eur) {
+  let usdt = eur * p_dolar;
+  return usdt
+}
 
 /*
   CURRENCY FORMATTING
@@ -15,7 +20,10 @@ function convertToUSD() {}
   They have also decided that they should add a 1% fee to all foreign transactions, which means you only convert 99% of the £ to BRL.
 */
 
-function convertToBRL() {}
+function convertToBRL(usd) {
+  let r_brasileño = usd * p_brasileño;
+  return r_brasileño
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.

@@ -4,8 +4,13 @@
   A business requires a program that calculates how much sales tax to charge
   Sales tax is 20% of the price of the product
 */
+const iva = 0.20;
 
-function calculateSalesTax() {}
+function calculateSalesTax(product) {
+  let iva_p = product * iva;
+  let p_mas_iva = product + iva_p;
+  return p_mas_iva;
+}
 
 /*
   CURRENCY FORMATTING
@@ -17,8 +22,14 @@ function calculateSalesTax() {}
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function addTaxAndFormatCurrency() {}
-
+function addTaxAndFormatCurrency(price) {
+  let product_end = calculateSalesTax(price).toFixed(2);
+  const EUR = "£"
+  return EUR.concat(product_end)
+  //** new Intl.NumberFormat("ja-JP", {style: "currency", currency: "EUR"}).format(product_end); */
+}
+console.log(typeof addTaxAndFormatCurrency(2))
+console.log( addTaxAndFormatCurrency(2))
 /* ======= TESTS - DO NOT MODIFY =====
 There are some Tests in this file that will help you work out if your code is working.
 To run these tests type `node 4-tax.js` into your terminal

@@ -5,7 +5,7 @@ var mentor4 = "Rob";
 var mentor5 = "Yohannes";
 
 let nunMentor = 5;
-let numAlumnos = 11;
+let numAlumnos = 9;
 let totalClas = nunMentor + numAlumnos;
 let porcentaje = 100;
 

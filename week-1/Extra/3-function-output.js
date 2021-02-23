@@ -1,14 +1,18 @@
 // Add comments to explain what this function does. You're meant to use Google!
+//** Esta función retorna un valor random, va a multiplicar un numero random del 0 al 0.99 y se multiplicara con el numero 10 */
 function getNumber() {
   return Math.random() * 10;
 }
 
 // Add comments to explain what this function does. You're meant to use Google!
+//** En este caso el metodo contact concatena un string con el otro o tambien se puede aplicar con los arrays para sumar 2 arrays y volverlo uno solo */
 function s(w1, w2) {
   return w1.concat(w2);
 }
 
 function concatenate(firstWord, secondWord, thirdWord) {
+  let concatenate_word = firstWord.concat(` ${secondWord} ${thirdWord}`);
+  return concatenate_word;
   // Write the body of this function to concatenate three words together.
   // Look at the test case below to understand what this function is expected to return.
 }

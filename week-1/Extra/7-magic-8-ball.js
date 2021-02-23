@@ -45,8 +45,14 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
+const positivity = ["very positive" , "positive", "negative", "very negative"];
+
 function shakeBall() {
+  let answer = Math.random().toString()
+  console.log("The ball has shaken!");
+  return answer
 }
+
 
 // This function should say whether the answer it is given is
 // - very positive
@@ -55,7 +61,16 @@ function shakeBall() {
 // - very negative
 // This function should expect to be called with any value which was returned by the shakeBall function.
 function checkAnswer(answer) {
+  let ram = answer 
+  if(ram === "It is decidedly so.") {
+    return "very positive"
+  } else if(ram === "My reply is no.") {
+    return "very negative"
+  }
+  return positivity[Math.round(Math.random() * 1)]
 }
+  
+
 
 /* ======= TESTS - DO NOT MODIFY =====
 There are some Tests in this file that will help you work out if your code is working.
