@@ -8,6 +8,11 @@
 
 var numbers = [1, 2, 3]; // Don't change this array literal declaration
 
+numbers.push(4)
+
+//** or */
+// number[3] = 4
+
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */

@@ -8,8 +8,16 @@
 
 let n = 10;
 
-function sumTillNum(num){
-	//your code here
+function sumTillNum(num) {
+	let suma = [];
+	let reducer = (acumulador, currenValue) => acumulador + currenValue;
+	for(let i = 0; i <= num; i++) {
+		suma.push(i);
+	}
+	return `${suma} =  ${suma.reduce(reducer)}`
 }
 
+
 console.log("Sum from 0 to " + n + " is: " + sumTillNum(n));
+
+

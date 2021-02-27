@@ -9,7 +9,17 @@
 let n = 10;
 
 function sumTillNum(num){
-	//your code here
+	//let sus;
+	let c = 0;
+	let suma = [];
+	const reducer = (acumulater, currecVlue) => acumulater + currecVlue;
+	while(c <= num) {
+		//sus = `${c} + `
+		suma.push(c)
+		c++
+	}
+	return `${suma} = ${suma.reduce(reducer)}`
 }
+
 
 console.log("Sum from 0 to " + n + " is: " + sumTillNum(n));

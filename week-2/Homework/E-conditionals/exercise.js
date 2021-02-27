@@ -8,9 +8,34 @@
 
 var name = "Daniel";
 var danielsRole = "mentor";
+let stu = "estudiante"
 
 /* 
 EXPECTED RESULT
 ---------------
 Hi, I'm Daniel, I'm a mentor.
 */
+
+function im(roles) {
+  if(roles === 'mentor') {
+    return `Hi, I'm ${name}, I'm ${roles}`
+  }else {
+    return `Hi, I'm ${name}, I'm ${stu}`
+  }
+}
+console.log(im(danielsRole));
+console.log(im(name));
+
+
+
+
+
+function idd(role, names) {
+  if(role === "mentor") {
+    return `Hi, I'm ${names}, I'm ${role}`
+  }else {
+   return `Hi, I'm ${names}, I'm ${role}`
+  }
+}
+console.log(idd(danielsRole,name));
+console.log(idd(stu, "Roberto"));
