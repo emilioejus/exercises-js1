@@ -23,7 +23,44 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
+  let upper = element => element.charCodeAt() 
 
+ 
+  let upper_ACSII = [65, 90];
+  let lower_ACSII = [97, 122];
+  let num_ACSII = [48, 57];
+  let symbol_ASCII = [33,35,36,37,46,42,38]
+  let answer = [];
+  let cal = (ACSII) => {
+    for(let i = ACSII[0] ; i  <= ACSII[1]; i++) {
+      ACSII.push(i)
+    }
+  }
+  let arryExist = [];
+  let existInArray = (arrayElement, arrayList) => arrayList.indexOf(arrayElement) > -1
+  
+  cal(upper_ACSII)
+  cal(lower_ACSII)
+  cal(num_ACSII)
+  let som = element => { 
+  let asciiArray = element.split("").map(upper);
+    
+    if(element.length >= 5  &&
+     asciiArray.some(x => upper_ACSII.includes(x)) &&
+     asciiArray.some(x => lower_ACSII.includes(x)) && 
+     asciiArray.some(x => num_ACSII.includes(x)) &&
+     asciiArray.some(x => symbol_ASCII.includes(x)) &&
+     !existInArray(element, arryExist)
+     ) {
+       answer.push(true)
+    }else {
+       answer.push(false)
+    }
+    arryExist.push(element);
+  }
+  passwords.map(som)
+
+  return answer;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

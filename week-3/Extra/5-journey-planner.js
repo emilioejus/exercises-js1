@@ -7,7 +7,21 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
+function journeyPlanner(arr, medios) {
+  let sitios = [];
+  let only = element => {
+    if(element.includes(medios)) {
+      return sitios.push(element[0])
+    }else {
+      return false
+    }
+  }
+
+  if(arr.map(only)){
+    return sitios
+  }else {
+    return false
+  }
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

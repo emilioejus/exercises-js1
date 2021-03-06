@@ -8,8 +8,17 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
-
+function colonisers(colA) {
+  let stay = "A"
+  let fam = "family"
+  let initialA = element => {
+    if(element[0] === stay && element.includes(fam)) {
+      return element
+    }else {
+      return false
+    }
+  }
+  return colA.filter(initialA) 
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

@@ -5,6 +5,7 @@
 
 var numbers = [3, 2, 1];
 var sortedNumbers; // complete this statement
+sortedNumbers = numbers.reverse();
 
 /* 
   DO NOT EDIT BELOW THIS LINE

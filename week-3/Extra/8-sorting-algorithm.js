@@ -14,7 +14,46 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 
-function sortAges(arr) {}
+let swap = (myArr, indexOne, indexTwo) => {
+  var tmpVal = myArr[indexOne];
+  myArr[indexOne] = myArr[indexTwo];
+  myArr[indexTwo] = tmpVal;
+  return myArr;
+}
+let bubbleSort =(myArr) => {
+  var size = myArr.length;
+ 
+  for( var pass = 1; pass < size; pass++ ){ 
+    for( var left = 0; left < (size - pass); left++){ 
+      var right = left + 1;
+      if( myArr[left] > myArr[right] ){
+        swap(myArr, left, right);
+      }
+    }
+  }
+ 
+  return myArr;
+}
+
+
+
+let cleanArray = (arr, clean) => arr.forEach(clean);
+let arrayExist = (arrayList, arrayElement) => arrayList.indexOf(arrayElement) > -1
+
+
+
+function sortAges(arr) {
+  let arrayClean = [];
+  let clean = element => {
+    if(typeof element === typeof 1 && !arrayExist(arrayClean, element)) {
+      return arrayClean.unshift(element)
+    }
+  }
+  cleanArray(arr,clean);
+
+  return bubbleSort(arrayClean)
+}
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

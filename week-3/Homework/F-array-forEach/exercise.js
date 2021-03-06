@@ -8,6 +8,21 @@
 */
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+let propiedades = function(element) {
+  if (element % 3 === 0 && element %5 === 0){
+    return 'Fizz Buzz'
+  }
+  else if(element % 5 === 0) {
+    return 'Buzz'
+  }else  if(element % 3 === 0) {
+    return 'Fizz'
+  }else {
+    return element;
+  }
+}  
+ 
+
+arr.forEach(element => console.log(propiedades(element)));
 
 /* EXPECTED OUTPUT */
 
