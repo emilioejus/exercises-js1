@@ -43,7 +43,7 @@ function validatePasswords(passwords) {
   cal(lower_ACSII)
   cal(num_ACSII)
   let som = element => { 
-  let asciiArray = element.split("").map(upper);
+    let asciiArray = element.split("").map(upper);
     
     if(element.length >= 5  &&
      asciiArray.some(x => upper_ACSII.includes(x)) &&

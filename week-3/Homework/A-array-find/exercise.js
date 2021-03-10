@@ -8,7 +8,7 @@
 var names = ["Rakesh", "Antonio", "Alexandra", "Andronicus", "Annam", "Mikey", "Anastasia", "Karim", "Ahmed"];
 
 function prueba(h){
-  if(h.charAt() === "A" && h.length === 9) {
+  if(h.charAt() === "A" && h.length > 7) {
     return h
   }
 }
